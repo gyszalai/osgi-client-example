@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    
+    <reference id="exampleOsgiService"
+               interface="hu.vanio.osgi.service.ExampleOsgiService"/>
+
+    <bean id="client" class="hu.vanio.osgi.client.ExampleOsgiClient" init-method="init">
+        <property name="exampleOsgiService" ref="exampleOsgiService"/>
+    </bean>
+
+</blueprint>
